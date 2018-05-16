@@ -25,10 +25,14 @@ echo json_encode($usuarios);
 //$usuario->login("root", "!@#$");
 //echo $usuario;
 
-$aluno = new Usuario("aluno", "@lun0");
+//Criando um novo usuário
+//$aluno = new Usuario("aluno", "@lun0");
+//$aluno->insert();
+//echo $aluno;
 
-$aluno->insert();
-
-echo $aluno;
+$usuario = new Usuario();
+$usuario->loadById(8);
+$usuario->update("professor", "!@#$%¨&*");
+echo $usuario;
 
  ?>
